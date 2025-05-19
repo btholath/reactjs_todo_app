@@ -184,3 +184,9 @@ webpack 5.99.8 compiled successfully in 1207 ms
 
 https://expert-capybara-659jv4974qp3469w-5500.app.github.dev/react-base/index.html
 
+----------------------------------------------
+## Create project with Create React (Boiler plate genertor)
+## project: react-base-2
+
+@btholath ➜ /workspaces/reactjs_todo_app/ (main) $ npm uninstall -g create-react-app
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ npx create-react-app react-base-2
