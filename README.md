@@ -190,3 +190,145 @@ https://expert-capybara-659jv4974qp3469w-5500.app.github.dev/react-base/index.ht
 
 @btholath ➜ /workspaces/reactjs_todo_app/ (main) $ npm uninstall -g create-react-app
 @btholath ➜ /workspaces/reactjs_todo_app (main) $ npx create-react-app react-base-2
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ cd react-base-2
+@btholath ➜ /workspaces/reactjs_todo_app/react-base-2 (main) $npm run start
+
+
+----------------------------------------------
+## Create project with Vite (Boiler plate genertor)
+## project: vite-react-app
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ npm create vite@latest
+Need to install the following packages:
+create-vite@6.5.0
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  vite-react-app
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Scaffolding project in /workspaces/reactjs_todo_app/vite-react-app...
+│
+└  Done. Now run:
+
+  cd vite-react-app
+  npm install
+  npm run dev
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ 
+
+
+## Create project with Nextjs (Boiler plate genertor)
+## project: nextjs-react-app
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ npx create-next-app@latest 
+Need to install the following packages:
+create-next-app@15.3.2
+Ok to proceed? (y) y
+
+✔ What is your project named? … nextjs-react-app
+✔ Would you like to use TypeScript? … No / Yes
+✔ Would you like to use ESLint? … No / Yes
+✔ Would you like to use Tailwind CSS? … No / Yes
+✔ Would you like your code inside a `src/` directory? … No / Yes
+✔ Would you like to use App Router? (recommended) … No / Yes
+✔ Would you like to use Turbopack for `next dev`? … No / Yes
+✔ Would you like to customize the import alias (`@/*` by default)? … No / Yes
+Creating a new Next.js app in /workspaces/reactjs_todo_app/nextjs-react-app.
+
+Using npm.
+
+Initializing project with template: app 
+
+
+Installing dependencies:
+- react
+- react-dom
+- next
+
+
+added 29 packages, and audited 30 packages in 17s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+Success! Created nextjs-react-app at /workspaces/reactjs_todo_app/nextjs-react-app
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ 
+
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ cd nextjs-react-app/
+@btholath ➜ /workspaces/reactjs_todo_app/nextjs-react-app (main) $ npm run dev
+
+> nextjs-react-app@0.1.0 dev
+> next dev --turbopack
+
+   ▲ Next.js 15.3.2 (Turbopack)
+   - Local:        http://localhost:3000
+   - Network:      http://10.0.0.55:3000
+
+ ✓ Starting...
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+ ✓ Ready in 881ms
+
+
+
+## Create project with Remix (Boiler plate genertor)
+## project: remix-react-app
+
+
+@btholath ➜ /workspaces/reactjs_todo_app/nextjs-react-app (main) $ cd ..
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ npx create-remix@latest
+Need to install the following packages:
+create-remix@2.16.7
+Ok to proceed? (y) y
+
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+
+ remix   v2.16.7 💿 Let's build a better website...
+
+   dir   Where should we create your new project?
+         ./remix-react-app
+
+      ◼  Using basic template See https://remix.run/guides/templates for more
+      ✔  Template copied
+
+   git   Initialize a new git repository?
+         No
+
+  deps   Install dependencies with npm?
+         Yes
+
+      ✔  Dependencies installed
+
+  done   That's it!
+
+         Enter your project directory using cd ./remix-react-app
+         Check out README.md for development and deploy instructions.
+
+         Join the community at https://rmx.as/discord
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ cd remix-react-app/
+@btholath ➜ /workspaces/reactjs_todo_app/remix-react-app (main) $ npm run dev
+
+> dev
+> remix vite:dev
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
