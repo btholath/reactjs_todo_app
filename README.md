@@ -156,5 +156,31 @@ Uses development mode for fast build + debugging
 
 
 
+## Build the App
+@btholath ➜ /workspaces/reactjs_todo_app/react-base (main) $ npm run build
+
+> react-base@1.0.0 build
+> webpack
+
+asset bundle.js 1.02 MiB [emitted] (name: main)
+runtime modules 1.04 KiB 5 modules
+modules by path ./node_modules/ 1000 KiB
+  modules by path ./node_modules/react-dom/ 947 KiB
+    modules by path ./node_modules/react-dom/*.js 2.67 KiB 2 modules
+    modules by path ./node_modules/react-dom/cjs/*.js 945 KiB 2 modules
+  modules by path ./node_modules/react/ 44.2 KiB
+    ./node_modules/react/index.js 186 bytes [built] [code generated]
+    ./node_modules/react/cjs/react.development.js 44 KiB [built] [code generated]
+  modules by path ./node_modules/scheduler/ 12 KiB
+    ./node_modules/scheduler/index.js 194 bytes [built] [code generated]
+    ./node_modules/scheduler/cjs/scheduler.development.js 11.9 KiB [built] [code generated]
+modules by path ./*.js 479 bytes
+  ./index.js 310 bytes [built] [code generated]
+  ./App.js 169 bytes [built] [code generated]
+webpack 5.99.8 compiled successfully in 1207 ms
+@btholath ➜ /workspaces/reactjs_todo_app/react-base (main) $ 
+
+
+
 https://expert-capybara-659jv4974qp3469w-5500.app.github.dev/react-base/index.html
 
