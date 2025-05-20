@@ -332,3 +332,51 @@ npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supporte
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
 
+
+## Create a ToDO project using Vite and ReactJs
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ npm create vite@latest
+
+> npx
+> create-vite
+
+│
+◇  Project name:
+│  todo-list-app
+│
+◇  Select a framework:
+│  React
+│
+◇  Select a variant:
+│  JavaScript
+│
+◇  Scaffolding project in /workspaces/reactjs_todo_app/todo-list-app...
+│
+└  Done. Now run:
+
+  cd todo-list-app
+  npm install
+  npm run dev
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ cd todo-list-app/
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ npm install
+
+added 152 packages, and audited 153 packages in 16s
+
+33 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ npm run dev
+
+> todo-list-app@0.0.0 dev
+> vite
+
+
+  VITE v6.3.5  ready in 247 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+
