@@ -12,7 +12,8 @@ export default function TodoListItem({todo, onCompletedClicked, onDeleteClicked}
     return (
         <div>
             {/* Display the text of the todo */}
-            <h3>{todo.text}</h3>
+            <h3 className={todo.isCompleted ? "completed" : ""}>{todo.text}</h3>
+
 
             {/* If the todo is completed, show "Complete!" */}
             {todo.isCompleted && <p>Complete!</p>}
