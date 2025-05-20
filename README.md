@@ -380,3 +380,18 @@ found 0 vulnerabilities
 
 
 
+----------------------------------------------------
+## Implement Redux to vite-reactjs-app
+
+
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ npm install @reduxjs/toolkit react-redux
+
+added 11 packages, and audited 164 packages in 2s
+
+34 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
+
+

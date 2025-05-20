@@ -1,5 +1,8 @@
+
+import { useSelector } from "react-redux";
 import NewToDoForm from "./NewToDoForm"
 import TodoListItem from "./TodoListItem"
+
 
 /**
  * TodoList Component - Displays the list of completed and incomplete todos.
@@ -7,7 +10,10 @@ import TodoListItem from "./TodoListItem"
  * @param {Array} incompleteTodos - List of incomplete todo items.
  * Each item is rendered using the TodoListItem component.
  */
-export default function TodoList({completedTodos, incompleteTodos, onCompletedClicked, onDeleteClicked, onCreateClicked}){
+export default function TodoList({ onCompletedClicked, onDeleteClicked, onCreateClicked}){
+
+    const todos = useSelector( state => state.todos.value);
+
     return (
         <div>
         <h1>My Todos</h1>
@@ -17,7 +23,7 @@ export default function TodoList({completedTodos, incompleteTodos, onCompletedCl
 
         <h3>Completed:</h3>
         {/* Render each completed todo */}
-        {completedTodos.map((todo, index) => (
+        {todos.map((todo, index) => (
             <TodoListItem 
                 todo={todo} 
                 key={index} 
@@ -27,7 +33,7 @@ export default function TodoList({completedTodos, incompleteTodos, onCompletedCl
 
         <h3>Incomplete:</h3>
         {/* Render each incomplete todo */}
-        {incompleteTodos.map((todo, index) => (
+        {todos.map((todo, index) => (
             <TodoListItem 
                 todo={todo} 
                 key={index} 
