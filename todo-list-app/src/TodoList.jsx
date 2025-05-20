@@ -1,3 +1,4 @@
+import NewToDoForm from "./NewToDoForm"
 import TodoListItem from "./TodoListItem"
 
 /**
@@ -11,7 +12,7 @@ export default function TodoList({completedTodos, incompleteTodos}){
         <div>
         <h1>My Todos</h1>
         {/* Placeholder text where a todo input form might go in future */}
-        <p>New todo form will go here ...</p>
+        <NewToDoForm />
         <h3>Completed:</h3>
         {/* Render each completed todo */}
         {completedTodos.map((todo, index) => (
