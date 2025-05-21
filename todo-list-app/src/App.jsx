@@ -1,5 +1,6 @@
-//import reactLogo from './assets/react.svg'
-//import viteLogo from '/vite.svg'
+import { useEffect } from 'react';
+import {useDispatch} from 'react-redux';
+import { loadTodos } from './thunks';
 import './App.css'
 import TodoList from './TodoList'
 
@@ -10,9 +11,11 @@ import TodoList from './TodoList'
  * Passes these todos as props to the TodoList component for rendering.
  */
 function App() {
-  function createTodo(text){
-    setIncompleteTodos([...incompleteTodos,  { text, isCompleted: false}]);
-  }
+  const dispatch = useDispatch();
+
+  useEffect( () => {
+    dispatch(loadTodos());
+  },[]);
 
   return (
     <>
