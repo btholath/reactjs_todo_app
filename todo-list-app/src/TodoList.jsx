@@ -10,7 +10,7 @@ import TodoListItem from "./TodoListItem"
  * @param {Array} incompleteTodos - List of incomplete todo items.
  * Each item is rendered using the TodoListItem component.
  */
-export default function TodoList({ onCompletedClicked, onDeleteClicked, onCreateClicked}){
+export default function TodoList(){
 
     const todos = useSelector( state => state.todos.value);
 
@@ -19,7 +19,7 @@ export default function TodoList({ onCompletedClicked, onDeleteClicked, onCreate
         <h1>My Todos</h1>
         
         {/* Placeholder text where a todo input form might go in future */}
-        <NewToDoForm onCreateClicked={onCreateClicked}/>
+        <NewToDoForm />
 
         <h3>Completed:</h3>
         {/* Render each completed todo */}
@@ -27,7 +27,6 @@ export default function TodoList({ onCompletedClicked, onDeleteClicked, onCreate
             <TodoListItem 
                 todo={todo} 
                 key={index} 
-                onDeleteClicked={onDeleteClicked} 
             />
         ))}
 
@@ -37,7 +36,6 @@ export default function TodoList({ onCompletedClicked, onDeleteClicked, onCreate
             <TodoListItem 
                 todo={todo} 
                 key={index} 
-                onCompletedClicked={onCompletedClicked}
             />
         ))}
         </div>
