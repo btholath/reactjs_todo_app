@@ -447,3 +447,22 @@ The thunk can dispatch actions and has read-only access to the store
 
 @btholath ➜ /workspaces/reactjs_todo_app (main) $ git add .
 @btholath ➜ /workspaces/reactjs_todo_app (main) $ git commit -m "version 1.0 - applied redux thunk"
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ git push
+
+
+## Setup TodoAPI using server.js
+npm install express  // This creates a node_modules folder and updates your package.json
+
+Run server
+node server.js or npm start
+
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ node server.js
+Server listening on port 3000
+
+To test the front-end connecting to TodoAPI. In terminal, click on PORTS tab in vs code terminal, select Port 3000
+right click on Visibility "Private" and switch Port Visibility to Public
+
+In browser or from postman, you can access
+https://expert-capybara-659jv4974qp3469w-3000.app.github.dev/todos
+
+
