@@ -23,6 +23,10 @@ export const todosSlice = createSlice({
       const text = action.payload;
       state.value = state.value.filter((t) => t.text !== text);
     },
+    todosUpdated: (state, action) => {
+      const updatedTodos = action.payload;
+      state.value = updatedTodos;
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(loadingCompleted, (state, action) => {
@@ -31,5 +35,5 @@ export const todosSlice = createSlice({
   },
 });
 
-export const { createTodo, markTodoAsCompleted, deleteTodo } = todosSlice.actions;
+export const { createTodo, markTodoAsCompleted, deleteTodo, todosUpdated } = todosSlice.actions;
 export default todosSlice;

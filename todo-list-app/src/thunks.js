@@ -9,6 +9,7 @@ import {
     loadingCompleted, 
     loadingFailed 
 } from './loadingSlice';
+import { todosUpdated } from './todoSlice';
 
 
 export const loadTodos = () => async (dispatch) => {
@@ -21,3 +22,13 @@ export const loadTodos = () => async (dispatch) => {
   }
 };
 
+export const createTodo = (newTodoText) => async (dispatch, getState) => {
+  try {
+    const response = await axios.post('/api/todos', {text: newTodoText });
+    const newTodo = response.data;
+    const updatedTodos = getState().todos.value.concat(newTodo);
+    dispatch(todosUpdated(updatedTodos));
+  } catch (e) {
+    console.log(e);
+  }
+}
