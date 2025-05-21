@@ -395,3 +395,52 @@ found 0 vulnerabilities
 @btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
 
 
+
+
+------------------------------------------------
+## vite-react-app using Thunk
+
+A "thunk" is just a function that delays doing something until later.
+
+Think of it like this:
+📦 Thunk is a wrapper for a future task.
+
+Imagine you’re ordering a pizza:
+  - You don’t make the pizza right now.
+  - You give an order slip to the chef.
+  - The chef (Redux) will make the pizza later, when it's time.
+
+🧾 That order slip is like a thunk — it’s a function that knows what to do, but it doesn’t run until Redux tells it to.
+
+
+Real-World Analogy: Annuity Payout Request
+Scenario:
+Imagine a customer buys an annuity policy, but chooses deferred payout — they’ll start receiving monthly payments at retirement, say in 20 years.
+
+Here’s how that maps to a thunk:
+Concept	              Insurance World	                                      Redux World
+Thunk	Payout          instruction stored for future use	                    A function that delays an action (e.g. fetch)
+Trigger (dispatch)	  Customer retires and files a payout request	          Redux middleware calls the thunk
+Action (side effect)	Insurance system starts payouts, pulls policy info	  API call, then dispatches result to reducer
+State change	        Payments start, customer account is updated	          Redux store updates with new data
+
+
+A Thunk is like a "payout instruction" on file. It doesn’t do anything now, but when the time is right — like when the customer retires — it activates, pulls data (policy, balance), and starts the payment flow.
+
+
+
+Example Flow (Redux + Annuity)
+App starts — customer info is loaded.
+User clicks "Show My Annuity Payout".
+Redux dispatches a thunk that:
+  Calls backend API: /getPayoutSchedule
+  Waits for the response
+  Dispatches: { type: "PAYOUT_LOADED", payload: [...] }
+
+Just like an annuity payout doesn’t happen instantly but needs triggering and data retrieval, a thunk wraps the logic until Redux tells it to act.
+
+
+## How does Redux Thunk work?
+A component dispatches a "thunk" instead of an action.
+The login insie the thunk is executed
+The thunk can dispatch actions and has read-only access to the store
