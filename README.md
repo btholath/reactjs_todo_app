@@ -444,3 +444,6 @@ Just like an annuity payout doesn’t happen instantly but needs triggering and 
 A component dispatches a "thunk" instead of an action.
 The login insie the thunk is executed
 The thunk can dispatch actions and has read-only access to the store
+
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ git add .
+@btholath ➜ /workspaces/reactjs_todo_app (main) $ git commit -m "version 1.0 - applied redux thunk"
