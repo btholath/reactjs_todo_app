@@ -478,3 +478,19 @@ added 11 packages, and audited 239 packages in 2s
 
 found 0 vulnerabilities
 @btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
+
+
+Key Flow
+Filename: App.jsx
+1. App mounts → useEffect runs.
+2. dispatch(loadTodos()) is called.
+3. loadTodos:
+  - Dispatches loadingStarted
+  - Makes GET /api/todos via Axios
+  - On success → loadingCompleted(todos)
+  - On failure → loadingFailed(error)
+4. Redux store updates state.
+5. TodoList renders the updated todos.
+
+
+
