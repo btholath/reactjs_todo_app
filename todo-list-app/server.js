@@ -1,3 +1,9 @@
+// server.js
+/**
+ * Express server for managing todo items.
+ * Supports GET, POST, PUT, DELETE operations.
+ */
+
 // Import the Express framework to build the HTTP API
 import express from 'express';
 
@@ -6,7 +12,6 @@ const app = express();
 
 // Define the port where the server will run
 const port = 3000;
-
 
 
 // In-memory array to store todo items
@@ -38,13 +43,11 @@ app.get('/api/todos', (req, res) => {
  * Sets the ID based on current timestamp and marks it as not completed.
  */
 app.post('/api/todos', (req, res) => {
-
     const newTodo = {
         id: `${Date.now()}`,    // Unique ID based on timestamp
         text: req.body.text,    // Todo text from client
         isCompleted: false,     // Default to not completed       
     };
-
     todos.push(newTodo);        // Add to in-memory list
     res.json(newTodo);          // Return the created todo
 });

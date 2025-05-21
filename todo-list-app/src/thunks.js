@@ -1,3 +1,8 @@
+// thunks.js
+/**
+ * Redux thunk to asynchronously fetch todos from API.
+ * Dispatches loadingStarted → API call → loadingCompleted or loadingFailed.
+ */
 import axios from 'axios';
 import { 
     loadingStarted, 
@@ -7,13 +12,12 @@ import {
 
 
 export const loadTodos = () => async (dispatch) => {
-    dispatch(loadingStarted());
-    try {
+  dispatch(loadingStarted());
+  try {
     const response = await axios.get('/api/todos');
-    const todos = response.data;
-    console.log(todos);
-    dispatch(loadingCompleted(todos));
-    } catch (e) {
-        loadingFailed(e);
-    }
-}
+    dispatch(loadingCompleted(response.data));
+  } catch (e) {
+    dispatch(loadingFailed());
+  }
+};
+

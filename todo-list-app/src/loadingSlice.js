@@ -1,3 +1,9 @@
+// loadingSlice.js
+/**
+ * Redux slice to track loading status.
+ * - Flags for completed and successful loading.
+ */
+
 // Import createSlice from Redux Toolkit to define a Redux slice
 import {createSlice} from '@reduxjs/toolkit';
 
@@ -50,9 +56,8 @@ export const loadingSlice = createSlice({
        loadingFailed: (state) => {
         state.value.completed = true;
         state.value.successful = false;
-       }
-
-    }
+       },
+    },
 });
 
 // Export the actions and reducer to be used in your app with Redux.

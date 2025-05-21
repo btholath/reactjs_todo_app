@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import {useDispatch} from 'react-redux';  // Hook to dispatch Redux actions
 import { loadTodos } from './thunks';     // Async thunk to load todos from API
-import './App.css'
-import TodoList from './TodoList'
+import './App.css';
+import TodoList from './TodoList';
 
 
 /**

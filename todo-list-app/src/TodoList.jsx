@@ -1,43 +1,30 @@
-
-import { useSelector } from "react-redux";
-import NewToDoForm from "./NewToDoForm"
-import TodoListItem from "./TodoListItem"
-
-
+// TodoList.jsx
 /**
- * TodoList Component - Displays the list of completed and incomplete todos.
- * @param {Array} completedTodos - List of completed todo items.
- * @param {Array} incompleteTodos - List of incomplete todo items.
- * Each item is rendered using the TodoListItem component.
+ * Component to display completed and incomplete todos.
+ * Uses Redux state for loading and todos.
  */
-export default function TodoList(){
+import { useSelector } from 'react-redux';
+import NewToDoForm from './NewToDoForm';
+import TodoListItem from './TodoListItem';
 
-    const todos = useSelector( state => state.todos.value);
+export default function TodoList() {
+  const todosAreLoading = useSelector((state) => state.loading.value.completed);
+  const todos = useSelector((state) => state.todos.value);
 
-    return (
-        <div>
-        <h1>My Todos</h1>
-        
-        {/* Placeholder text where a todo input form might go in future */}
-        <NewToDoForm />
-
-        <h3>Completed:</h3>
-        {/* Render each completed todo */}
-        {todos.map((todo, index) => (
-            <TodoListItem 
-                todo={todo} 
-                key={index} 
-            />
-        ))}
-
-        <h3>Incomplete:</h3>
-        {/* Render each incomplete todo */}
-        {todos.map((todo, index) => (
-            <TodoListItem 
-                todo={todo} 
-                key={index} 
-            />
-        ))}
-        </div>
-    )
+  return (
+    <div>
+      <h1>My Todos</h1>
+      <NewToDoForm />
+      {todosAreLoading ? (
+        <p>Loading ...</p>
+      ) : (
+        <>
+          <h3>Completed:</h3>
+          {todos.filter(t => t.isCompleted).map((todo, index) => ( <TodoListItem todo={todo} key={index} />  ))}
+          <h3>Incomplete:</h3> 
+          {todos.filter(t => !t.isCompleted).map((todo, index) => ( <TodoListItem todo={todo} key={index} /> ))}
+        </>
+      )}
+    </div>
+  )
 }

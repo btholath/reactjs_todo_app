@@ -1,3 +1,8 @@
+// vite.config.js
+/**
+ * Vite configuration for React project.
+ * Sets up proxy to backend API.
+ */
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -8,7 +13,7 @@ export default defineConfig({
   server:{
     proxy: {
      '/api': {
-      target: 'https://expert-capybara-659jv4974qp3469w-3000.app.github.dev',
+      target:'https://expert-capybara-659jv4974qp3469w-3000.app.github.dev',
       changeOrigin: true,
     }
   }
