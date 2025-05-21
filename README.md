@@ -466,3 +466,15 @@ In browser or from postman, you can access
 https://expert-capybara-659jv4974qp3469w-3000.app.github.dev/todos
 
 
+
+## Create thunks.js along with updating server.js
+
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ npm install axios
+
+added 11 packages, and audited 239 packages in 2s
+
+50 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
