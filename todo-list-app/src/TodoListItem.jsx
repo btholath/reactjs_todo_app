@@ -1,7 +1,14 @@
 import { useDispatch } from "react-redux";
 import { markTodoAsCompleted , deleteTodo} from "./thunks";
-import styled from 'styled-components';
+import styled, { withTheme } from 'styled-components';
 
+const getBackgroundColor = ( {important}) => {
+  if (important){
+    return 'background-color: yellow;';
+  } else {
+    return 'background-color: white;';
+  }
+}
 
 /**
  * TodoListItem Component - Represents a single todo item.
