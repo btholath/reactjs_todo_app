@@ -480,7 +480,7 @@ found 0 vulnerabilities
 @btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
 
 
-Key Flow
+## Key Flow
 Filename: App.jsx
 1. App mounts → useEffect runs.
 2. dispatch(loadTodos()) is called.
@@ -493,4 +493,24 @@ Filename: App.jsx
 5. TodoList renders the updated todos.
 
 
+
+## Why Styled Components ?
+- Redux manages state
+- Thunk manages side effects
+- Selectors abstract away the structure of the state
+- Components manage the UI
+- and styles
+- Styled components allow us to separate the styles an d style logic from our components
+
+npm install styled-components
+
+
+##  Testing React Ecosystems
+Testing reducers
+Testing selectors
+Testing styled-components
+
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ node src/loadingSlice.test.js 
+The loadingStarted reducer works!
+@btholath ➜ /workspaces/reactjs_todo_app/todo-list-app (main) $ 
 

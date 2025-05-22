@@ -19,7 +19,8 @@ import {createSlice} from '@reduxjs/toolkit';
  *   }
  * }
  */
-export const loadingSlice = createSlice({
+
+export const loadingSliceDef =  {
     name: 'loading',                    // name of the slice, used for actions
     initialState: {
         value: {
@@ -58,10 +59,10 @@ export const loadingSlice = createSlice({
         state.value.successful = false;
        },
     },
-});
+};
 
 // Export the actions and reducer to be used in your app with Redux.
-
 // Export action creators to use in components
+export const loadingSlice = createSlice(loadingSliceDef);
 export const { loadingStarted, loadingCompleted, loadingFailed} = loadingSlice.actions;
 
