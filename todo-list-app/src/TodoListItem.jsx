@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { markTodoAsCompleted , deleteTodo} from "./thunks";
+import styled from 'styled-components';
 
 
 /**
@@ -11,21 +12,24 @@ import { markTodoAsCompleted , deleteTodo} from "./thunks";
  * Renders the todo text, and conditionally shows a status and appropriate button.
  */
 
+const CardContainer = styled.div`
+  ${props => props.important && 'background-color: yellow;'}
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 16px;
+`;
+
+
 export default function TodoListItem({todo }){
     const dispatch = useDispatch();
 
     return (
-        <div>
-            {/* Display the text of the todo */}
-            <h3 className={todo.isCompleted ? "completed" : ""}>{todo.text}</h3>
-
-            {/* If the todo is completed, show "Complete!" */}
-            {todo.isCompleted && <p>Complete!</p>}
-
-            {/* Show either a Delete or Complete button depending on status */}
-            {todo.isCompleted 
-            ? <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete Item</button>
-            : <button onClick={() => dispatch(markTodoAsCompleted(todo.id))}>Mark as Completed</button>}
-        </div>
-    );
+    <CardContainer important={todo.text.endsWith('!')}>
+      <h3>{todo.text}</h3>
+      {todo.isCompleted && <p>Complete!</p>}
+      {todo.isCompleted
+        ? <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete Item</button>
+        : <button onClick={() => dispatch(markTodoAsCompleted(todo.id))}>Mark as Completed</button>}
+    </CardContainer>
+  );
 }

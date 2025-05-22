@@ -9,8 +9,8 @@ import { createRoot } from 'react-dom/client';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import {todosSlice} from './todoSlice';
-import './index.css';
-import App from './App.jsx';
+import App from './App.jsx'
+import './index.css'
 import {loadingSlice} from './loadingSlice.js';
 
 const store = configureStore({
