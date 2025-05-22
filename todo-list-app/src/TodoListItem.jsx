@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
-import { markTodoAsCompleted, deleteTodo } from "./todoSlice";
+import { markTodoAsCompleted , deleteTodo} from "./thunks";
+
 
 /**
  * TodoListItem Component - Represents a single todo item.
@@ -11,7 +12,6 @@ import { markTodoAsCompleted, deleteTodo } from "./todoSlice";
  */
 
 export default function TodoListItem({todo }){
-
     const dispatch = useDispatch();
 
     return (
@@ -19,15 +19,13 @@ export default function TodoListItem({todo }){
             {/* Display the text of the todo */}
             <h3 className={todo.isCompleted ? "completed" : ""}>{todo.text}</h3>
 
-
             {/* If the todo is completed, show "Complete!" */}
             {todo.isCompleted && <p>Complete!</p>}
 
             {/* Show either a Delete or Complete button depending on status */}
             {todo.isCompleted 
-            ? <button onClick={ () => dispatch(deleteTodo(todo.text))}>Delete Item</button>
-            : <button onClick={ () => dispatch(markTodoAsCompleted(todo.text))}>Mark as Completed</button>
-            }
+            ? <button onClick={() => dispatch(deleteTodo(todo.id))}>Delete Item</button>
+            : <button onClick={() => dispatch(markTodoAsCompleted(todo.id))}>Mark as Completed</button>}
         </div>
     );
 }

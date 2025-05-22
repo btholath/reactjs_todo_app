@@ -59,7 +59,7 @@ app.post('/api/todos', (req, res) => {
  * Example: DELETE /todos/123456789 removes the todo with that ID.
  */
 app.delete('/api/todos/:id', (req, res) => {
-    const todoId = parseInt(req.params.id);
+    const todoId = req.params.id;
     todos = todos.filter(todo => todo.id !== todoId);
     res.send(); // Respond with empty 200 OK
 });

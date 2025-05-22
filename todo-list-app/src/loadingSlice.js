@@ -65,5 +65,3 @@ export const loadingSlice = createSlice({
 // Export action creators to use in components
 export const { loadingStarted, loadingCompleted, loadingFailed} = loadingSlice.actions;
 
-// Export the reducer to use in the Redux store
-export default loadingSlice;
